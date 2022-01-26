@@ -1,6 +1,5 @@
 package com.tiago.os.domain;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +9,9 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class Cliente extends Pessoa implements Serializable{
+public class Cliente extends Pessoa {
 	private static final long serialVersionUID = 1L;
-
+	
 	@JsonIgnore
 	@OneToMany(mappedBy = "cliente")
 	private List<OS> list = new ArrayList<>();
